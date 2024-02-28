@@ -16,7 +16,7 @@ export const CreateProblem=()=>{
         try{
             setVerdict("OK");
             setIsSolved(false);
-            const data=await axios.post('http://localhost:5000/create',{name,contestId,index,verdict,plink,isSolved});
+            const data=await axios.post('https://prob-backend.onrender.com/create',{name,contestId,index,verdict,plink,isSolved});
             if(data){
                 navigate('/pro');
             }
