@@ -8,7 +8,7 @@ export const AllProblems=()=>{
     const [prob,setPro]=useState([]);
     const GetP=async()=>{
         try{
-            const res=await axios.get('http://localhost:5000/get');
+            const res=await axios.get('https://prob-backend.onrender.com/get');
             if(res){
                 setPro(res.data.allprobs);
             }
